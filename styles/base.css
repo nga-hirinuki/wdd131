@@ -1,0 +1,149 @@
+/* reset or base Removes browser default styles and sets a baseline.*/
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto 1fr 100px; 
+  }
+  body {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    background-color: #F5EEDD;
+    color: #06202B;
+  }
+
+* {
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*layout Handles structural elements like header, footer, and general page layout.*/
+  header {
+    background:#077A7D;
+    grid-column: 1 / 4;
+    text-align: center; 
+  }
+/* header - navigation section */
+        header h1 {
+            padding: 1em;
+            color: #F5EEDD;
+            font-weight: 400;
+        }
+        nav {
+            width: 100vw;
+            margin: 0;
+        }
+        nav ul{
+            list-style: none;
+            background-color: #06202B;
+            justify-content:center;
+            display: flex; 
+        }
+        nav ul li {
+            flex: 1 1 100%;
+        }
+        nav a {
+            display: block;
+            font-weight: 400;
+            font-size: 1.5em;
+            color: #7AE2CF;
+            padding: 0.75rem;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            font-weight: 500;
+            background-color: #7AE2CF; 
+            color: #06202B;  
+        }
+ 
+  main {    
+    grid-column: 1 / 4;
+    width: 95vw;
+    margin: 0 auto;
+    gap: 1em;
+  } 
+  /* main - 2 sections */
+        .section-wrapper{
+            display: flex;          
+        }  
+        .card {
+            
+            box-sizing: border-box;
+            padding: 2em;
+        }
+        #section1{
+            flex: 5;
+        }
+        #section2{
+            flex: 2;
+        }
+        
+        section {
+            background-color:#ffffff;
+            font-weight: 300;
+            font-size: 1.1em;
+            line-height: 1.5rem;
+            margin:10px;    
+        }
+        /* sections image floats */
+        .flag{
+            float: left;
+            margin: 25px 20px 0 0;
+        }
+        .mugshot{
+            float: right;
+            margin: 0 0 20px 20px;
+        }
+        h2{
+           margin-bottom: 30px;
+        }
+        h3{
+            margin-top: 20px;
+        }
+        p{
+            margin-top: 20px;
+        }
+  
+  footer {
+    background: #077A7D;
+    text-align: center;
+    grid-column: 1 / 4;
+    color:#F5EEDD;
+    font-weight: 300;
+    font-size: large;
+  }
+        footer p{
+            margin: 0 auto;
+        }
+  
+  main,
+  footer {
+    padding: 2rem;
+  }
+
+  
+
+
+/*componentsReusable UI pieces like buttons, cards, nav bars, etc.*/
+
+/* utilities Tiny, reusable helper classes for quick styling tweaks.*/
+
+/* media-queries Responsive rules using media queries.*/
+
+@media screen and (max-width: 690px){
+
+    .section-wrapper{        
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    main, footer {
+    padding:.5rem;
+  }
+}
