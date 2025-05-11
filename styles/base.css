@@ -112,11 +112,12 @@ body {
     text-align: center;
     grid-column: 1 / 4;
     color:#F5EEDD;
-    font-weight: 500;
-    font-size: 1.4rem;
+    
   }
         footer p{
             margin: 0 auto;
+            font-weight: 500;
+            font-size: 1.4rem;
         }
   
   main,
