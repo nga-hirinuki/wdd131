@@ -122,10 +122,14 @@ section {
     font-weight: 400;
     font-size: 1em;  
 }
+.weekly ul li a{
+    text-decoration: none;
+}
 
 .weekly ul li a:hover{
     font-weight: 500;
     color: #06202B;
+    
     }    
 /* image components */
 .flag{         
