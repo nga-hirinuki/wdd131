@@ -1,150 +1,168 @@
-/* reset or base Removes browser default styles and sets a baseline.*/
+/* Global Styles*/
 body {
     display: grid;
     height: 100vh;
-    grid-template-rows: auto 1fr 150px; 
-  }
-  body {
+    grid-template-rows: auto 1fr auto; 
+    background-color: #F5EEDD;
+    color: #06202B;  
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
-    font-variation-settings: "wdth" 100;
-    background-color: #F5EEDD;
-    color: #06202B;
+    font-variation-settings: "wdth" 100; 
   }
-
 * {
 	margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/*layout Handles structural elements like header, footer, and general page layout.*/
+/*main page layout.*/
   header {
     background:#077A7D;
-    grid-column: 1 / 4;
-    text-align: center; 
   }
-/* header - navigation section */
-        header h1 {
-            padding: 1em;
-            color: #F5EEDD;
-            font-weight: 400;
-        }
-        nav {
-            width: 100vw;
-            margin: 0;
-        }
-        nav ul{
-            list-style: none;
-            background-color: #06202B;
-            justify-content:center;
-            display: flex; 
-        }
-        nav ul li {
-            flex: 1 1 100%;
-        }
-        nav a {
-            display: block;
-            font-weight: 400;
-            font-size: 1.5em;
-            color: #7AE2CF;
-            padding: 0.75rem;
-            text-decoration: none;
-            text-align: center;
-        }
-        nav a:hover {
-            font-weight: 500;
-            background-color: #7AE2CF; 
-            color: #06202B;  
-        }
- 
-  main {    
-    grid-column: 1 / 4;
-    width: 95vw;
+  main{    
+    
+    width: 98vw;
     margin: 0 auto;
     gap: 1em;
   } 
-  /* main - 2 sections */
-        .section-wrapper{
-            display: flex;          
-        }  
-        .card {
-            
-            box-sizing: border-box;
-            padding: 2em;
-        }
-        #section1{
-            flex: 5;
-        }
-        #section2{
-            flex: 2;
-        }
-        
-        section {
-            background-color:#ffffff;
-            font-weight: 300;
-            font-size: 1.1em;
-            line-height: 1.5rem;
-            margin:10px;    
-        }
-        /* sections image floats */
-        .flag{
-            float: left;
-            margin: 25px 20px 0 0;
-        }
-        .mugshot{
-            float: right;
-            margin: 0 0 20px 20px;
-        }
-        h2{
-           margin-bottom: 30px;
-        }
-        h3{
-            margin-top: 20px;
-        }
-        p{
-            margin-top: 20px;
-        }
-  
   footer {
     background: #077A7D;
-    text-align: center;
-    grid-column: 1 / 4;
     color:#F5EEDD;
     
   }
-        footer p{
-            margin: 0 auto;
-            font-weight: 500;
-            font-size: 1.2rem;
-        }
-  
-  main,
-  footer {
+  main, footer {
     padding: 2rem;
   }
+  header, footer{
+    text-align: center;
+  }
 
-  
+/*components part for each section*/
+h2{
+    margin-bottom: 10px;
+    font-size: 130%;
+ }
+ h3, p{
+     margin-top: 20px;
+ }
 
+/* Header navigation component */
+header h1 {
+    padding: 1em;
+    color: #F5EEDD;
+    font-weight: 400;
+}
+nav {
+    width: 100vw;
+    margin: 0;
+}
+    nav ul{
+        list-style: none;
+        background-color: #06202B;
+        justify-content:center;
+        display: flex; 
+        flex-direction: column;
+    }
+    nav ul li {
+        flex: 1 1 100%;
+    }
+    nav a {
+        display: block;
+        font-weight: 400;
+        font-size: 1.5em;
+        color: #7AE2CF;
+        padding: 0.75rem;
+        text-decoration: none;
+        text-align: center;
+    }
+    nav a:hover {
+        font-weight: 500;
+        background-color: #7AE2CF; 
+        color: #06202B;  
+    }
 
-/*componentsReusable UI pieces like buttons, cards, nav bars, etc.*/
-
-/* utilities Tiny, reusable helper classes for quick styling tweaks.*/
+/* Section 2 nav compoments*/
+section {
+    background-color:#ffffff;
+    font-weight: 300;
+    font-size: 1.1em;
+    line-height: 1.5rem;
+    margin:15px 5px;    
+} 
+.section-wrapper{ /* main - 2 sections */
+    display: flex;
+    flex-direction: column;
+ }  
+ .card {
+    box-sizing: border-box;
+    padding: 2em;
+    text-align: center;
+}
+ #section1{
+     flex: 5;
+ }
+ #section2{
+     flex: 2;
+ }      
+#section2 h2{
+    font-size: 130%;
+    margin: 10px;
+ }          
+.weekly ul{
+    list-style: none;
+    line-height: 2em; 
+    display: flex;
+    font-weight: 500;
+}
+.weekly ul li{
+    margin-left: 10px;
+}
+.weekly ul li a{/* main - section2 - list */
+    text-decoration: none;
+    color: #077A7D;
+    display: block;
+    font-weight: 400;
+    font-size: 1em;  
+}
+.weekly ul li a:hover{
+    font-weight: 500;
+    color: #06202B;
+    }    
+/* image components */
+.flag{         
+    margin: 25px 0 0 0 ;
+}
+/* footer para */
+footer p{
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+#footpad{
+    padding: 20px 0 5px 0;
+}
 
 /* media-queries Responsive rules using media queries.*/
 
-@media screen and (max-width: 690px){
-
-    .section-wrapper{        
-        display: flex;
-        flex-direction: column;
-    }
-    nav ul{
-        flex-direction: column;
-        align-items: stretch;
-    }
-    main, footer {
+@media screen and (min-width: 600px){
+  
+nav ul, .section-wrapper{
+    flex-direction: row;
+}  
+main, footer {
     padding:.5rem;
   }
+.card {
+    text-align: left;
+}
+.flag{
+    float: left;
+    margin: 25px 20px 0 0;
+}
+.mugshot{
+    float: right;
+    margin: 0 0 20px 20px;
+}
+
 }
