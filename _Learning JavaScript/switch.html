@@ -7,7 +7,30 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="main" class="content">
+  <label for="colorSelect">Choose a color:</label>
+  <select id="colorSelect">
+    <option value="red">Red</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+    <option value="yellow">Yellow</option>
+  </select>
+  
+  <button onclick="changeBackground()">Change Background</button>
+
+<script src="scripts/switchexample.js"></script>
+
+
+<!-- if else statement example -->
+
+<label for="ageInput">Enter your age:</label>
+<input type="number" id="ageInput" />
+
+<button onclick="checkAge()">Check Eligibility</button>
+
+<p id="message"></p>
+<script src="scripts/ifelse.js"></script>
+
+    <!-- <div id="main" class="content">
         <h1>Welcome</h1>
         <article>
           <h2>About This Page</h2>
@@ -35,7 +58,7 @@
             <li><a href="#">About</a></li>
           </ul>
         </nav>
-      </div>
+      </div> -->
     
     <!-- Viewpoint of different media sizes -->
 <!-- <section> 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/test.css">
+    <title>Document</title>
+</head>
+<body>
+    
+  <h2>Open the Console: right click => Inspect => console</h2>
+  <button onclick="logFruits()">Log Fruits</button>
+  
+  <script>
+    function logFruits() {
+      const fruits = ["apple", "banana", "cherry"];
+  
+      fruits.forEach(function(fruit) {
+        console.log(fruit);
+      });
+    }
+  </script>
+
+
+<h2>Fruit List</h2>
+<ul id="fruitList"></ul>
+<button onclick="showFruits()">Show Fruits</button>
+
+<script>
+  function showFruits() {
+    const fruits = ["apple", "banana", "cherry"];
+    const list = document.getElementById("fruitList");
+
+    // Clear list if run multiple times
+    list.innerHTML = "";
+
+    fruits.forEach(function(fruit) {
+      const li = document.createElement("li");
+      li.textContent = fruit;
+      list.appendChild(li);
+    });
+  }
+</script>
+
+<title>forEach Arrow Function</title>
+</head>
+<body>
+
+<h2>Uppercased Fruits (see console)</h2>
+<button onclick="logUpperFruits()">Log Uppercase</button>
+
+<script>
+  function logUpperFruits() {
+    const fruits = ["apple", "banana", "cherry"];
+
+    fruits.forEach(fruit => console.log(fruit.toUpperCase()));
+  }
+</script>
+
+
+    
+
+</body>
+</html>

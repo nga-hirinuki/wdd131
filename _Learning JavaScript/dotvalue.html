@@ -1,0 +1,50 @@
+<input type="text" id="username" />
+<button onclick="getText()">Get Username</button>
+
+<script>
+function getText() {
+  const name = document.getElementById("username").value;
+  alert("Username: " + name); //   popup window 
+}
+</script>
+
+
+<label>
+    <input type="checkbox" id="subscribe" />
+    Subscribe to newsletter
+  </label>
+  <button onclick="checkBox()">Check Subscription</button>
+  
+  <script>
+  function checkBox() {
+    const isChecked = document.getElementById("subscribe").checked;
+    alert(isChecked ? "Subscribed!" : "Not Subscribed.");
+  }
+  </script>
+
+<p>Choose your plan:</p>
+<label><input type="radio" name="plan" value="Basic" /> Basic</label>
+<label><input type="radio" name="plan" value="Premium" /> Premium</label>
+<button onclick="getPlan()">Get Plan</button>
+
+<script>
+function getPlan() {
+  const plan = document.querySelector('input[name="plan"]:checked');
+  alert(plan ? "Selected: " + plan.value : "No plan selected.");
+}
+</script>
+
+<select id="colorSelect">
+    <option value="red">Red</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+  </select>
+  <button onclick="getColor()">Get Color</button>
+  
+  <script>
+  function getColor() {
+    const color = document.getElementById("colorSelect").value;
+    alert("Selected color: " + color);
+  }
+  </script>
+  

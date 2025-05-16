@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/test.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul id="numberList"></ul>
+
+  <script>
+    for (let i = 0; i < 19; i++) {
+      const li = document.createElement("li"); //create a list of <li></li>
+      li.textContent = "Item " + i; // output: Item O to Item 18
+      document.getElementById("numberList").appendChild(li); //using id numberlist add li from 0 => 18
+    }
+  </script>
+
+  <script>
+   let i = 0;
+
+    while (i <= 5) {
+      console.log("i is: " + i);
+      i++; // increment to avoid infinite loop
+    }
+  </script>
+
+  <script>
+  
+  let answer = "";
+
+    while (answer !== "yes") {
+      answer = prompt("Type 'yes' to continue:");
+    }
+    
+    alert("Thanks!");
+    </script>
+
+</body>
+
+</html>

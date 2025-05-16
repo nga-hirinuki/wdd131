@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/test.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <input type="number" id="userInput" placeholder="Enter a number ≥ 10" />
+<button onclick="checkInput()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+
+function checkInput() {
+    let input = parseInt(document.getElementById("userInput").value);
+    const result = document.getElementById("result");
+  
+    while (isNaN(input) || input < 10) {
+      input = parseInt(prompt("Please enter a number that is 10 or higher:"));
+    }
+  
+    result.textContent = "Thank you! You entered: " + input;
+}
+</script>
+
+
+<h2>Start Prompt Loop</h2>
+  <button onclick="startLoop()">Click to Continue</button>
+
+  <script>
+    function startLoop() {
+      let answer = "";
+
+      while (answer !== "yes") {
+        answer = prompt("Type 'yes' to continue:");
+      }
+
+      alert("Thanks!");
+    }
+  </script>
+
+</body>
+</html>
