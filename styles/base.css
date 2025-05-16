@@ -164,5 +164,12 @@ main, footer {
     float: right;
     margin: 0 0 20px 20px;
 }
+.weekly ul li a{/* main - section2 - list */
+    text-decoration: none;
+    color: #077A7D;
+    display: block;
+    font-weight: 400;
+    font-size: 1em;  
+}
 
 }
