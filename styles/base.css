@@ -124,6 +124,7 @@ section {
 }
 .weekly ul li a{
     text-decoration: none;
+    list-style: none;
     color: #077A7D;
 }
 
