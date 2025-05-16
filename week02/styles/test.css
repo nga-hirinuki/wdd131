@@ -1,0 +1,85 @@
+
+/* For different media sizes */
+
+/* h2{
+    color: blue; 
+    margin: 0;
+    border-bottom: 1px dashed #999;
+}
+section{
+    margin: 10px auto;
+    width: 400px;
+    border:1px solid #bbb;
+    background-color: #eee;
+    padding: 7px;
+} */
+/* medium media query section */
+/* @media (min-width:32.5em){
+    h2{
+        color: red;
+    }
+
+} */
+/* large media query section */
+/* @media (min-width:64em){
+    h2{
+        color: green;
+    }
+
+} */
+
+ /* Group selector */
+ h1, h2, p {
+    font-family: Arial, sans-serif;
+    margin-bottom: 1em;
+  }
+
+  /* Descendant selector */
+  article p {
+    color: #333;
+  }
+
+  /* Child selector */
+  ul > li {
+    list-style-type: square;
+  }
+
+  /* Adjacent sibling selector */
+  h2 + p {
+    font-style: italic;
+  }
+
+  /* General sibling selector */
+  h2 ~ p {
+    background-color: #f0f0f0;
+  }
+
+  /* Class and ID combination */
+  div#main.content {
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+
+  /* Attribute selector */
+  input[type="text"] {
+    border: 2px solid blue;
+    padding: 5px;
+  }
+
+  /* Pseudo-class */
+  a:hover {
+    color: red;
+    text-decoration: underline;
+  }
+
+  /* Pseudo-element */
+  p::first-line {
+    font-weight: bold;
+    color: darkblue;
+  }
+
+  /* Complex selector */
+  nav ul > li a:hover {
+    color: orange;
+    background-color: #fff5e6;
+  }
