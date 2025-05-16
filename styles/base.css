@@ -117,12 +117,11 @@ section {
 }
 .weekly ul li{
     margin-left: 10px;
-    color: #077A7D;
     display: block;
     font-weight: 400;
     font-size: 1em;  
 }
-.weekly ul li a:link{
+.weekly ul li a{
     text-decoration: none;
     list-style: none;
     color: #077A7D;
@@ -145,6 +144,9 @@ footer p{
 }
 #footpad{
     padding: 20px 0 5px 0;
+}
+a:link,a:visited {
+    text-decoration: none;
 }
 
 /* media-queries Responsive rules using media queries.*/
