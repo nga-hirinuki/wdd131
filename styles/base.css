@@ -161,14 +161,4 @@ main, footer {
 .mugshot{
     float: right;
     margin: 0 0 20px 20px;
-}
-.weekly ul li{/* main - section2 - list */
-    
-   
-    flex-direction: row;
-}
-.weekly ul li a  {/* main - section2 - list */
-    text-decoration: none;
-}
-
-}
+}}
