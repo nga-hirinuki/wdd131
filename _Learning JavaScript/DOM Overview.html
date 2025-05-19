@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/test.css">
+    <title>Document</title>
+</head>
+<body>
+    
+<header></header>
+    <main>
+      <section></section>
+      <section></section>
+      <article></article>
+    </main>
+<footer></footer>
+  <script>
+    // create variable and select a property in main element
+    const article = document.querySelector('article')
+
+    // add text in variable by using inner Html property 
+    article.innerHTML = 'innerHTML supports <strong>HTML</strong> tags.not.';
+
+    // add css style to the property which is inline not my favourite
+    article.style.textAlign = 'center';
+
+    //With this method we are creating a class inside the aritcle named active. Eliminates all previous properties
+    article.setAttribute('class', 'active');
+
+    // Adds new class to already existing classes, usually preferred
+    //articleElement.classList.add('active');
+
+    const paragraph = document.createElement('p');
+
+    article.appendChild(paragraph);
+    article.append(paragraph, 'Hello World Addition')
+
+
+    article.removeChild(paragraph);
+    article.remove();
+
+
+  </script>
+
+</body>
+</html>

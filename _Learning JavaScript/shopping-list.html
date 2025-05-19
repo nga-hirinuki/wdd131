@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list example</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+
+      li button {
+        font-size: 12px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item">
+      <button>Add item</button>
+    </div>
+
+    <ul>
+
+    </ul>
+
+    <script>
+    
+    // Step 1: Get references to the elements
+    const list = document.querySelector('ul');
+    const input = document.querySelector('input');
+    const button = document.querySelector('button');
+    // Create three variables that hold references to the list (<ul>), <input>, and <button> elements.
+
+    
+    // Step 2: Create function to handle button click
+    button.addEventListener('click', function() {
+    //Create a function that will run in response to the button being clicked.
+
+    // Store input value
+    const itemText = input.value;
+
+    // Clear the input
+    input.value = '';
+
+    // Create new elements
+    const listItem = document.createElement('li');
+    const span = document.createElement('span');
+    const deleteBtn = document.createElement('button');
+
+    // Set text contents
+    span.textContent = itemText;
+    deleteBtn.textContent = 'Delete';
+
+    // Append span and button to li
+    listItem.appendChild(span);
+    listItem.appendChild(deleteBtn);
+
+    // Append li to the list
+    list.appendChild(listItem);
+
+    // Add delete functionality
+    deleteBtn.addEventListener('click', function() {
+        list.removeChild(listItem);
+    });
+
+    // Focus back on input
+    input.focus();
+    });
+
+    </script>
+  </body>
+</html>
