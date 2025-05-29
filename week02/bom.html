@@ -11,22 +11,44 @@
         <label for="favchap">Enter Book and Chapter: </label>
         <input type="text" id="favchap" placeholder="Alma 5">
         <button type="submit">Add Chapter</button>
-        <ul id="list"></ul>
+        <ul id="list">
+
+        </ul>
     </main>
   <script>
-    //declare 3 variables
+
     const input = document.querySelector('input');
     const button = document.querySelector('button')
-    const list = document.querySelector('');
+    const list = document.querySelector('ul');
+    
+    // add event to button
+    button.addEventListener('click' , function() {
 
-    const li = document.createElement('li');
-    const deleteBtn = document.createElement('delete');
+       if (input.value.trim() === '') { 
+        alert('Please enter a chapter!'); 
+        input.focus(); 
+        return; 
+        }
 
-    li.textContent = input.value;
-    deleteButton.textContent = '❌';
-    li.append(deleteButton);
-    list.append(li);
+        // Create list item and delete button
+        const li = document.createElement('li');
+        const deleteButton = document.createElement('button');
 
+        // Set text and append
+        li.textContent = input.value;
+        deleteButton.textContent = '❌';
+        li.appendChild(deleteButton);
+        list.appendChild(li);
+
+        // Clear input and refocus
+        input.value = '';
+        input.focus();
+
+        // Delete functionality
+        deleteButton.addEventListener('click', function () {
+            list.removeChild(li);
+        });
+    });
   </script>
 
 </body>
