@@ -1,0 +1,54 @@
+@media screen and (min-width: 800px){
+    body {
+        height: 100vh;
+        }
+        h1{
+        font-size:3rem;
+        }
+    main{
+        grid-area: 2/1/7/-1;
+        }
+    .box1{
+        grid-area: 5/1/6/5;
+        }
+    .box2{
+        grid-area: 5/5/6/9;
+        }
+    .box1, .box2 {
+        z-index: 1;
+        }
+  
+    .middle-img{
+        overflow: clip;
+        }
+}
+
+@media screen and (min-width: 1350px){
+   
+    h1{
+        font-size:4rem;
+        }
+    
+    .box1{
+        grid-area: 2/2/4/4;
+        padding-top: 20px;          
+        }
+    .box2{
+        grid-area: 5/7/6/9;
+        }
+    .box1, .box2 {
+        z-index: 1;
+        border-radius: 10px; 
+        margin: 20px 12%; 
+        position: relative;
+  z-index: 1;
+        }
+    footer{
+        grid-area: 6/1/8/-1;
+        }
+    .weather{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;    
+    }
+}

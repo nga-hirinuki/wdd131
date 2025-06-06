@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   
+    <link rel="stylesheet" href="styles/place-mob.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <meta name="WDD 131 – Dynamic Web Fundamentals - Nga Hirinuki" 
+          content="This page will display links to all future course assignments" />
+    <title>W03 Assignment: Country Page</title>
+    <script src="scripts/windChill.js" defer></script> 
+    <script src="scripts/getdates.js" defer></script>  
+</head>
+<body>
+    <header>
+        <h1>New Zealand</h1>
+        <picture>
+            <img  class="fern" src="images/fern.svg" alt="weather icon" width="100" >
+        </picture>
+    </header> 
+    <main>
+        <div class="middle-img">
+        <picture>
+            <source media="(min-width:1000px )" srcset="images/middle-large.webp">
+            <source media="(min-width:800px )" srcset="images/middle-medium.webp">
+            <img src="images/middle-small.webp" alt="Middle Earth" width="100%">
+        </picture>
+        </div>
+    </main>
+        <figure class="box1">
+            <h2>Data</h2>            
+            <div class="form-row">
+                <div><span class="label">Population:</span>     5,311,100</div>
+                <div><span class="label">Capital:</span>        Wellington</div>
+                <div><span class="label">Language:</span>       English/Maori</div>
+                <div><span class="label">Currency:</span>       New Zealand</div>
+                <div><span class="label">Time Zone:</span>      UTC +12</div>
+                <div><span class="label">Calling Code:</span>   +64</div>
+                <div><span class="label">Internet TLD:</span>   .co.nz</div>
+            </div>
+        </figure>
+        <figure class="box2">
+            <div class="weather">
+                <h2>Weather</h2>
+                <picture>
+                    <img  class="weather-icon" src="images/weather-icon.png" alt="weather icon" width="60" height="60">
+                </picture>
+            </div>
+            <div class="form-row">
+                <div><span class="label">Temperature:</span>    10<sup>c</sup> </div>
+                <div><span class="label">Conditions:</span>     Partly Cloudy</div>
+                <div><span class="label">Wind:</span>           5km/h</div>
+                <div><span class="label">Wind Chill:</span>     <span id="windChill"></span></div>
+            </div>
+        </figure>
+ 
+    <footer>
+        <p id="footpad">&copy; <span id="currentyear"></span> Nga Hirinuki Auckland, New Zealand </p>
+        <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+    
+ 
+</body>
+</html>

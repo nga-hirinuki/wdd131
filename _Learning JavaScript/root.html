@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Placeholder-shown & Required Demo</title>
+  <style>
+    /* Global variables */
+    :root {
+      --border-focus: #0077cc;
+      --bg-placeholder: #fffae6;
+      --bg-required-empty: #ffeaea;
+    }
+
+    /* Basic reset */
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background: #f5f5f5;
+    }
+    input {
+      padding: 0.5rem;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+
+    /* Focused inputs get a blue border */
+    input:focus {
+      border-color: var(--border-focus);
+      outline: none;
+    }
+
+    /* Empty inputs showing placeholder get a pale yellow background */
+    input:placeholder-shown {
+      background-color: var(--bg-placeholder);
+    }
+
+    /* Required inputs that are still empty (showing placeholder) get a pale red background */
+    input:required:placeholder-shown {
+      background-color: var(--bg-required-empty);
+      border-color: red;
+    }
+
+    /* Optional inputs that are not focused nor empty get a light green border */
+    input:not(:required):not(:placeholder-shown):not(:focus) {
+      border-color: green;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <label for="name">Name (required)</label>
+  <input id="name"
+         type="text"
+         placeholder="Enter your name"
+         required>
+
+  <label for="email">Email (optional)</label>
+  <input id="email"
+         type="email"
+         placeholder="Enter your email">
+
+  <p>Try these actions:</p>
+  <ul>
+    <li>Leave the <strong>Name</strong> field empty—it will show the red-tinted required style.</li>
+    <li>Leave the <strong>Email</strong> field empty—it will show the placeholder-shown style.</li>
+    <li>Type into either field—the background goes white, and on blur, optional fields turn green.</li>
+    <li>Click or tab into a field to see the focus border.</li>
+  </ul>
+
+</body>
+</html>
