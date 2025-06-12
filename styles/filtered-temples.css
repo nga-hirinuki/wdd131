@@ -80,7 +80,7 @@ h2 {
     }
 footer {
     background: #077A7D;
-    color:#F5EEDD;
+    
     padding: 1rem;
     text-align: center;
     }
@@ -88,6 +88,7 @@ footer p{
     margin: 0 auto;
     font-weight: 500;
     font-size: 1rem;
+    color:#ffffff;
     }
 
 }
