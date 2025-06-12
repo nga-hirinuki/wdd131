@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- Base styles (mobile first) -->
+  <link rel="stylesheet" href="styles/filtered-temples.css" media="(min-width: 268px)">       
+
+  <!-- Larger breakpoints (enhancements for tablets/desktops) -->  
+  <link rel="stylesheet" href="styles/filtered-temples-large.css" media="(min-width: 834px)">
+  <link rel="stylesheet" href="styles/global.css">
+
+  <!--Google font roboto-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>TEMPLE ALBUM <a id="menu" href="#"></a></h1>
+       
+            <nav class="navigation">
+                <ul>
+                    <li><a id="all">HOME</a></li>
+                    <li><a id="small">SMALL</a></li>
+                    <li><a id="large">LARGE</a></li>
+                    <li><a id="new">NEW</a></li>
+                    <li><a id="old">OLD</a></li>
+                </ul>
+            </nav>
+    </header>
+    <main>
+      
+     <div class="res-grid">
+    </div>
+
+    </main>
+    <footer>
+        <p id="footpad">&copy; <span id="currentyear"></span> Nga Hirinuki Auckland, New Zealand </p>
+        <p>Last updated: <span id="lastModified"></span></p>
+
+    </footer>
+    <script src="scripts/filtered-temples.js" defer></script>
+    <script src="scripts/getdates.js"></script>
+    
+</body>
+</html>
