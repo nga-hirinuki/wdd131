@@ -21,6 +21,7 @@ fieldset{
     list-style: none;
     margin-top: 20px;
     padding:0;
+    margin-bottom: 0;
     }
 header h1, footer p {   
 	color: #fff;
