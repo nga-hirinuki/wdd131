@@ -18,6 +18,7 @@ main{
     }
 fieldset{
     border: none;
+    list-style: none;
     margin-top: 20px;
     padding:0;
     }
