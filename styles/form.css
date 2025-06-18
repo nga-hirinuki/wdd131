@@ -4,7 +4,6 @@ body {
 	font-family: Montserrat, Helvetica, sans-serif;
     display: block;
     margin: 0 auto;
-
     }
 header, footer{
     background-color: #077A7D;
@@ -13,45 +12,38 @@ header, footer{
     }
 main{
     display: block;
-    min-height: 700px;
-    max-width: 430px;
     margin: 0 auto;
     padding: 19px;
     background-color: #ffffff;
-   
     }
-header h1, footer p {
-	color: rgb(255, 255, 255);
+fieldset{
+    border: none;
+    margin-top: 20px;
+    padding:0;
+    }
+header h1, footer p {   
+	color: #fff;
     display: block;
     font-weight: 400;
     }
 h2{
-        color: #077A7D;
-        font-size: 4rem;
+    color: #077A7D;
+    font-size: 4rem;
     }
-#thanks{
-        font-size: 4rem;
-        font-weight:700;
-        color: #06202B;
-    }
-#feedback{
-        font-size: 2rem;
-        color: #077A7D;
-    }
-
 form{
     margin: 0 auto;
-    padding: 10px 30px 30px 30px;
     background-color: #fff;
 
     }
 .heading {
 	display: block;
-	font-weight: 400;
     color:#077A7D;
-    margin: 15px 0 6px 0; 
-    font-size:.85rem;
+    margin: 20px 0 6px 0; 
+    padding-left: 5px;
     }
+label[name=product]{
+    margin-top: 0;
+}
 input[type=text], 
 input[type=date], 
 option[type=options], 
@@ -64,7 +56,7 @@ select[id=product] {
     padding:.65rem;
     width: 94%;
     appearance: none;
-    margin-top: 6px;
+    margin: 6px 0 0 5px;
     }
 
 input[type=date], 
@@ -73,16 +65,18 @@ textarea[type=review],
 #username {
     font-size:.85rem; 
     }
-    input[type=date]{
-        width: 40%;
+input[type=date]{
+    width: 40%;
     }
 .checkbox{
     display: block;
     margin-top: 4px;
     color: #06202B;
     font-weight: 400;
-    font-size: .75rem;
     }
+#checkbox{
+padding-left: 5px;
+}
 
 /* stars */
 input[type="radio"] {
@@ -94,7 +88,6 @@ input[type="radio"] {
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: left;
-    margin-top: 6px;
     }
 .stars > label {
 	color: #06202B;
@@ -132,6 +125,15 @@ input[type=submit]
         margin-top: 20px;
         font-size: 1.5rem;
         border: 0;        
+    }
+#thanks{
+        font-size: 4rem;
+        font-weight:700;
+        color: #06202B;
+    }
+#feedback{
+        font-size: 2rem;
+        color: #077A7D;
     }
 @media screen and (min-width: 600px) {
     body{
