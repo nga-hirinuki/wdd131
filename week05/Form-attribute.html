@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action=""></form>
+    <fieldset>
+        <legend>name the section</legend>
+        <label for="dob">Date of Birth</label>
+        <input type="text" id="dob" name="dob" aria-describedby="dob-help">
+        <small id="dob-help">Format: MM/DD/YYYY</small>
+    </fieldset>
+    <fieldset>
+        <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error" aria-live="polite">Please enter a valid email address.</span>
+    </fieldset>
+    <fieldset>
+        <input type="text" title="Your full legal name as on ID">   
+    </fieldset>
+    <fieldset>
+        <input type="checkbox" id="addDetails">
+        <label for="addDetails">Add extra details</label>
+        <div id="detailsSection" hidden>
+            <label for="notes">Notes</label>
+            <input type="text" id="notes">
+        </div>
+    </fieldset>
+    <fieldset>
+        <button type="submit" aria-disabled="true" onclick="return false;" class="btn-disabled">
+            Submit
+        </button>
+        <label for="appointment">Appointment Date</label>
+        <select id="appointment" aria-disabled="true" onclick="return false;">
+            <option value="">June 15 (Fully booked)</option>
+        </select>
+        <small id="appointment-help">This date is unavailable. Please choose another.</sm>
+    </fieldset>
+    <fieldset>
+        <select id="appointment" aria-disabled="true" aria-describedby="appointment-help"></select>
+    </fieldset>
+    <fieldset>
+        <button id="submitBtn" onclick="handleSubmit()">Submit</button>
+    </fieldset>
+    <fieldset>
+        <form aria-describedby="form-hint">
+            <p id="form-hint"><span class="required">*</span> indicates required fields</p>
+        
+            <label for="name">
+            Full Name <span class="required" aria-hidden="true">*</span>
+            </label>
+            <input type="text" id="name" name="name" required aria-required="true">
+        
+            <label for="email">
+            Email <span class="required" aria-hidden="true">*</span>
+            </label>
+            <input type="email" id="email" name="email" required aria-required="true">
+        
+            <label for="company">
+            Company (optional)
+            </label>
+            <input type="text" id="company" name="company">
+        
+            <button type="submit">Submit</button>
+        </form>
+    </fieldset>
+    <fieldset>
+        <form>
+            <p><span class="required">*</span> Required field</p>
+        
+            <label for="email">
+            Email <span class="required" aria-hidden="true">*</span>
+            </label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="password">
+            Password <span class="required" aria-hidden="true">*</span>
+            </label>
+            <input type="password" id="password" name="password" required>
+        
+            <label for="bio">
+            Bio (optional)
+            </label>
+            <textarea id="bio" name="bio"></textarea>
+        
+            <button type="submit">Submit</button>
+        </form>
+    </fieldset>
+    <fieldset id = js-second>
+        <form id="myForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+        
+            <button type="submit" id="submitBtn">Submit</button>
+        </form>
+    </fieldset>
+    <fieldset>
+        <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="444-456-7890" title="Format: 123-456-7890">
+    </fieldset>
+<fieldset>
+    <label for="fruits">Choose your favorite fruits:</label><br>
+        <select id="fruits" name="fruits" multiple size="4">
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+        <option value="orange">Orange</option>
+        <option value="grape">Grape</option>
+        </select>
+    <label for="emails">Invite people:</label>
+    <input type="email" id="emails" name="emails" multiple placeholder="email1@example.com, email2@example.com">
+    </fieldset>
+    <fieldset><form id="signupForm" action="/signup">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </form>
+  
+    <!-- Button placed elsewhere on the page -->
+    <div class="footer">
+        <button type="submit" form="signupForm">Sign Up</button>
+    </div></fieldset>
+    <fieldset>
+    <input list="browsers" name="browser" id="browser">
+    <datalist id="browsers">
+        <option value="Chrome">
+        <option value="Firefox">
+        <option value="Safari">
+        <option value="Edge">
+        <option value="Opera">
+    </datalist>
+
+    <label for="city">Choose your city:</label>
+    <input list="cities" id="city" name="city">
+    <datalist id="cities">
+    <option value="New York">
+    <option value="Los Angeles">
+    <option value="Chicago">
+    <option value="Houston">
+    </datalist>
+    </fieldset>
+    <fieldset>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" autofocus>
+        </form>
+    </fieldset>
+<script>
+  function handleSubmit() {
+    const btn = document.getElementById('submitBtn');
+    btn.setAttribute('aria-disabled', 'true');
+    btn.classList.add('btn-disabled');
+    btn.onclick = (e) => e.preventDefault();
+
+    // Simulate form processing
+    setTimeout(() => {
+      btn.removeAttribute('aria-disabled');
+      btn.classList.remove('btn-disabled');
+      btn.onclick = handleSubmit;
+    }, 3000);
+  }
+</script>
+
+<script id="js-second">
+    const form = document.getElementById('myForm');
+    const submitBtn = document.getElementById('submitBtn');
+  
+    form.addEventListener('submit', function (event) {
+      // Prevent actual form submission for demo
+      event.preventDefault();
+  
+      // Disable the button to prevent multiple clicks
+      submitBtn.disabled = true;
+      submitBtn.setAttribute('aria-disabled', 'true');
+      submitBtn.textContent = 'Submitting...';
+  
+      // Simulate processing
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.removeAttribute('aria-disabled');
+        submitBtn.textContent = 'Submit';
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
