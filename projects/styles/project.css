@@ -1,0 +1,350 @@
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    background-color:#023859 ;
+    font-family: 'Merriweather', serif;
+    font-weight: 300; 
+    font-style: normal;
+    text-align: center;
+    justify-items: center; 
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+/*************** Mobile Version ********/
+header,main,footer{
+    width: 100%;
+}
+header{
+    padding: 10px;
+    margin: 0 auto; 
+    align-items: center;
+    border-bottom: 2px solid #DAF2C2;
+    }
+    header h1{
+        text-align: left;
+        font-weight: 400; 
+        color: white;
+        width: 100%;
+        }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        padding: 1rem 2rem;
+        position: relative; 
+        z-index: 2;
+          }
+    #headlogo{
+        display: flex;
+        align-self: center;        
+        }
+        #headlogo h1 a{
+            text-decoration: none;  
+            color:white;
+            }
+    #ngalogo{
+        margin-right: 10px;
+        }
+    .hamburger {
+        font-size: 2rem;
+        cursor: pointer;
+        display: none;
+        }
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+        }
+    .nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 200;
+        font-size: 2rem;
+        }
+    .nav-links li a:hover {
+        color: #04D99D;
+        }
+        /* .nav-links li a.active {
+            color: #04D99D;
+            } */
+main{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    }
+p {
+    margin: 1rem;
+    padding: 0.5rem;
+    }
+h2 {
+    font-size: 2rem;
+    padding: .5rem 1rem;
+    text-align: center;
+    }
+.callout{
+        color: #023859;
+        background-color: #F2DC6B;
+        padding: 1rem 0.5rem;
+    }
+    .callout01 {
+        color: #023859;
+        background-color: #F2DC6B;
+        padding: 5rem 0.5rem;
+    }
+    .callout h1 {
+        font-size: 3rem;        
+        margin: 0 auto;
+    }
+    .callout01 h1 {
+        font-size: 3rem;        
+        margin: 0 auto;
+    }
+ 
+    .whyus{
+        padding: 2rem;
+        color:#F2DC6B;
+    }
+    .whyus p {
+        margin: -.2rem;
+        color:#DAF2C2;
+        padding-bottom: 2rem;
+    }
+    .whyus h1 {
+        font-size: 1.5rem;
+    }
+    .work {
+        width: 900%;
+        object-fit: cover;
+    }
+    .clientreviews {
+        color:#DAF2C2;
+        padding: 50px;
+    }
+    .clientreviews h1{
+        display:block;
+        width: 100%;
+        color: #F2DC6B;
+    }
+    .clientreviews p{
+        display:block;
+        flex:1;
+        font-size: 1.5rem;
+    }
+    .home{
+        list-style: none;
+        
+    }
+    
+
+
+footer {
+    border-top: 2px solid #DAF2C2;
+    padding: 1rem;
+    margin: 10px;
+    text-align: center;
+    }
+    footer h3{
+        font-size: 2rem;
+        padding-bottom: .3rem;
+        color:#04D99D;
+    }
+    footer h4{
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        font-weight: 300;
+        color: #DAF2C2;
+    }
+    footer h4{
+        margin: 0 auto;
+        font-weight: 300;
+        font-size: 1rem;
+        line-height: 1.4rem;
+        color: #DAF2C2;
+        }
+    .footcol{
+        display: block;
+        text-align:left;
+        padding: 10px;
+    }
+    .footcol1{
+        display: block;
+        text-align:left;
+        padding: 10px;
+    }
+
+
+@media (max-width: 768px) {
+.hamburger {
+    display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #023859;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        text-align: right;
+        padding: 1rem;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+
+ 
+}
+
+.res-grid{
+        display: grid;
+        grid-template-columns: 1fr;     
+        gap: 1rem;
+        padding: 1rem;
+    }
+/***** Tablet 2col ********/
+@media (min-width: 768px) {
+        .res-grid {
+          grid-template-rows: repeat(2, 1fr);
+        }
+        footer{
+            display: flex;
+            padding: 20px 30px; 
+        }
+        .footcol{
+            width: 25%;
+            text-align:left;
+        }
+        .footcol1{
+            width: 50%;
+            vertical-align: top;
+        }
+        .callout{
+            padding: 4rem;
+         
+        }
+        .callout01 h1 {
+            font-size: 5rem;        
+            margin: 0 auto;
+        }
+        .callout h1 {
+            font-size: 6rem;        
+        }
+      
+        .callout h1, .whyus{
+            width: 950px;
+            margin: 0 auto; 
+            padding: 70px 0;
+        }
+        .whyus{
+            display: flex;            
+        }
+        .whyus p{
+            text-align: left;
+            line-height: 1.3;
+            padding-bottom: 20px;
+        }
+        .whyus h2{
+            font-size: 2rem;
+            color:#F2DC6B;
+        }
+        #whychoose{
+            width: 50%; 
+        }
+        .clientreviews {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .clientreviews h1{
+            display:block;
+            width: 100%;
+            color: #F2DC6B;
+        }
+        .clientreviews p{
+            display:block;
+            flex:1;
+            font-size: 1.5rem;
+        }
+     .third{
+        display: flex;
+        width: 100%;
+       
+        margin-bottom: 2rem;
+        justify-items: center;
+
+     }
+      .text-copy{
+        padding:15px;
+        margin: 0 auto;
+        justify-items: center;
+      }
+      .text-copy h2{
+        font-size: 2.3rem;
+      }
+      .text-copy p{
+        text-align: center;
+      }
+    
+    }
+      
+/***** Desktop Large Screen ********/
+@media (min-width: 1440px) {
+}
+    
+@media screen and (min-width: 30em) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+    main {
+      grid-template-columns: 1fr 1fr 1fr;
+      display: block;
+  }
+
+  /***** form **************************/
+
+  form{
+    display: block;
+    margin: 0 auto;
+    padding: 3rem;
+    width: 33%;
+  }
+  
+  fieldset{
+    text-align: left;
+    padding: 1rem;
+    display: block;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  legend{
+    padding: 6px;
+    color:#04D99D;
+    }
+    label{
+        color:#DAF2C2;
+        padding:10px 0 5px;
+    }
+    .checkbox-group{  
+    background-color: blue;
+    }
+
+    input{
+        padding-top: 1.5rem;
+    }
+    .busdetail, textarea, label{
+      display: flex;
+      flex-direction: column;
+    }
+    textarea{
+        width:100%;
+        background-color: pink;
+    }
+
+    

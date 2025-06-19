@@ -25,8 +25,8 @@
     // add content to li and delete button
     // create a class for css
     // append button to li
-    //append list(argument) to li   
-    // from the delete button eventlistener remove input 
+    /*append list(argument) to li   
+     from the delete button eventlistener remove input */
     function displayList(item) {
         let li = document.createElement('li');
         let deleteButton = document.createElement('button');

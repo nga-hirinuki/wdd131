@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Project</title>
+     <!-- Base styles (mobile first) -->
+  <link rel="stylesheet" href="styles/project.css" media="(min-width: 430px)"> 
+
+  <!--Google font Merriweather & roboto-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+            <nav class="navbar">    
+                    <div id="headlogo">
+                        <img id="ngalogo" src="images/ngalogo.svg" alt="logo" width="40">
+                        <h1><a id="home" href="#">ngatokoa</a></h1>
+                    </div>
+                    <div class="hamburger" id="hamburger">&#9776;</div>
+                    <ul class="nav-links" id="nav-links">
+                        <li><a id="home"  href="#">home</a></li>
+                        <li><a id="standout" href="#">stand out</a></li>
+                        <li><a id="engageform" href="#">form</a></li>
+                        <li><a id="new" href="#">Contact</a></li>
+                    </ul>
+            </nav>
+    </header>
+    <main id="main-content">
+
+        <div id="standout-content"></div>
+       
+            
+        
+    </main>
+    <footer>
+        <div class="footcol1">
+            <h3>about us</h3>
+            <h4> With roots in graphic design, we’ve built brands that pop and communicate clearly. Now, we’re 
+                pushing into web design—combining visual storytelling with modern development to help businesses 
+                thrive online.</h4>
+        </div>
+        <div class="footcol">
+            <h3>services</h3>
+            <h4>branding</h4>
+            <h4>website design</h4>
+        </div>
+        <div class="footcol">
+            <h3>get in touch</h3>
+            <h4>support@ngatokoa.com</h4>
+            <h4>(123) 456-7890</h4>
+        </div>
+        <div class="footcol">
+            <h3>ngatokoa</h3>
+            <h4 id="footpad">&copy; <span id="currentyear"></span> Auckland, New Zealand <br>Last updated: <span id="lastModified"></span></h4>
+        </div>
+    </footer>
+
+    <script src="scripts/project.js"></script>
+    <script src="scripts/filtered-temples.js" defer></script>
+    <script src="/scripts/getdates.js"></script>
+    
+</body>
+</html>
